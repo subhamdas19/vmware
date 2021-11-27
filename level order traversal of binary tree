@@ -1,0 +1,16 @@
+Write a function to print level order traversal of binary tree
+https://www.geeksforgeeks.org/level-order-tree-traversal/
+
+Method 2 (Using queue)
+
+Algorithm: 
+For each node, first the node is visited and then it’s child nodes are put in a FIFO queue. 
+
+printLevelorder(tree)
+1) Create an empty queue q
+2) temp_node = root /*start from root*/
+3) Loop while temp_node is not NULL
+    a) print temp_node->data.
+    b) Enqueue temp_node’s children 
+      (first left then right children) to q
+    c) Dequeue a node from q.
